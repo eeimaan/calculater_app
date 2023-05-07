@@ -18,5 +18,5 @@ samples, guidance on mobile development, and a full API reference.
 <h1>  </h1>
 
 <h1> project snap</h1><br>
+<img alt="Calculator screen" src="images\cal.png" width="350" height="550"/>
 
-<img alt="Calculator screen" src="D:\flutter projects\calculater_app\images\cal.png"/>
