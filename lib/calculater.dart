@@ -11,40 +11,38 @@ class calculater extends StatefulWidget {
 
 class _calculaterState extends State<calculater> {
 
-  
   var userInput = '';
   var answer = '';
+
   @override
   Widget build(BuildContext context) {
-    
+    print('rebuild');
     return Scaffold(
-      
       backgroundColor: Colors.black,
       body: SafeArea(
-        
         child: Column(
 
           children: [
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.symmetric(vertical: 5),
+                padding: const EdgeInsets.symmetric(vertical: 10),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: <Widget>[
                       Container(
-                        padding: const EdgeInsets.all(10),
+                        padding: EdgeInsets.all(10),
                         alignment: Alignment.centerRight,
                         child: Text(
                           userInput,
-                          style: const TextStyle(fontSize: 30, color: Colors.white),
+                          style: TextStyle(fontSize: 30, color: Colors.white),
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.all(5),
+                        padding: EdgeInsets.all(15),
                         alignment: Alignment.centerRight,
                         child: Text(
                           answer,
-                          style: const TextStyle(
+                          style: TextStyle(
                               fontSize: 40,
                               color: Colors.white,
                               fontWeight: FontWeight.bold),
@@ -55,143 +53,143 @@ class _calculaterState extends State<calculater> {
             ),
 
             Expanded(
-              flex: 4,
+              flex: 2,
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Row(
                       children: [
-                           mybutton(title: 'AC',   onpress: () {
+                        mybutton(title: 'AC',onpress: () {
                           setState(() {
                             userInput = '';
                             answer = '0';
                           });
                         },),
-                           mybutton(title: '+/-',   onpress: () {
+                        mybutton(title: '+/-',onpress: () {
 
                         },),
-                           mybutton(title: '%',   onpress: () {
+                        mybutton(title: '%',onpress: () {
                           setState(() {
                             userInput += '%';
                           });
                         },),
-                           mybutton(title: '/',   onpress: () {
+                        mybutton(title: '/',onpress: () {
                           setState(() {
                             userInput += '/';
                           });
-                        }, color: const Color(0xffffa00a),),
+                        }, color: Color(0xffffa00a),),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 15),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Row(
                       children: [
-                           mybutton(title: '7',   onpress: () {
+                        mybutton(title: '7',onpress: () {
                           setState(() {
                             userInput += '7';
                           });
                         },),
-                           mybutton(title: '8',   onpress: () {
+                        mybutton(title: '8',onpress: () {
                           setState(() {
                             userInput += '8';
                           });
                         },),
-                           mybutton(title: '0',   onpress: () {
+                        mybutton(title: '0',onpress: () {
                           setState(() {
                             userInput += '0';
                           });
                         },),
-                           mybutton(title: 'x',  onpress: () {
+                        mybutton(title: 'x',onpress: () {
                           setState(() {
                             userInput += 'x';
                           });
-                        }, color: const Color(0xffffa00a),),
+                        }, color: Color(0xffffa00a),),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Row(
                       children: [
-                           mybutton(title: '4',  onpress: () {
+                        mybutton(title: '4',onpress: () {
                           setState(() {
                             userInput += '4';
                           });
                         },),
-                           mybutton(title: '5',  onpress: () {
+                        mybutton(title: '5',onpress: () {
                           setState(() {
                             userInput += '5';
                           });
                         },),
-                            mybutton(title: '6',  onpress: () {
+                        mybutton(title: '6',onpress: () {
                           setState(() {
                             userInput += '6';
                           });
                         },),
-                            mybutton(title: '-',  onpress: () {
+                        mybutton(title: '-',onpress: () {
                           setState(() {
                             userInput += '-';
                           });
-                        }, color: const Color(0xffffa00a),),
+                        }, color: Color(0xffffa00a),),
                       ],
                     ),
-                   ),
+                  ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Row(
                       children: [
-                            mybutton(title: '1',   onpress: () {
+                        mybutton(title: '1', onpress: () {
                           setState(() {
                             userInput += '1';
                           });
                         },
                         ),
-                            mybutton(title: '2',  onpress: () {
+                        mybutton(title: '2',onpress: () {
                           setState(() {
                             userInput += '2';
                           });
                         },),
-                            mybutton(title: '3',  onpress: () {
+                        mybutton(title: '3',onpress: () {
                           setState(() {
                             userInput += '3';
                           });
                         },),
-                           mybutton(title: '+',   onpress: () {
+                        mybutton(title: '+', onpress: () {
                           setState(() {
                             userInput += '+';
                           });
-                        },color: const Color(0xffffa00a),),
+                        },color: Color(0xffffa00a),),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    padding: const EdgeInsets.symmetric(vertical: 10),
                     child: Row(
                       children: [
-                            mybutton(title: '0',  onpress: () {
+                        mybutton(title: '0',onpress: () {
                           setState(() {
                             userInput += '0';
                           });
                         },),
-                           mybutton(title: '.',  onpress: () {
+                        mybutton(title: '.',onpress: () {
                           setState(() {
                             userInput += '.';
                           });
                         },),
-                           mybutton(title: 'DEL',  onpress: () {
+                        mybutton(title: 'DEL',onpress: () {
                           setState(() {
                             userInput =
                                 userInput.substring(0, userInput.length - 1);
                           });
                         },),
-                            mybutton(title: '=',   onpress: () {
+                        mybutton(title: '=', onpress: () {
                           equalPressed();
                           setState(() {
 
                           });
-                        },color: const Color(0xffffa00a),),
+                        },color: Color(0xffffa00a),),
                       ],
                     ),
                   ),
@@ -206,7 +204,9 @@ class _calculaterState extends State<calculater> {
       ),
     );
   }
- void equalPressed() {
+
+
+  void equalPressed() {
 
     String finaluserinput = userInput;
     finaluserinput = userInput.replaceAll('x', '*');
@@ -219,13 +219,14 @@ class _calculaterState extends State<calculater> {
   }
 
 
-  }
+}
 
 
 
-  
 
- /*class     mybutton extends StatelessWidget {
+
+
+/*class     mybutton extends StatelessWidget {
   String title;
        mybutton({Key? key, required this.title}) : super(key: key);
 
