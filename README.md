@@ -15,8 +15,4 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-<h1>  </h1>
-
-<h1> project snap</h1><br>
-<img alt="Calculator screen" src="images\cal.png" width="350" height="550"/>
-
+<img src="assets/images/cal.jpg"/>
